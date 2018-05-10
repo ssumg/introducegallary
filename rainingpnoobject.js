@@ -30,7 +30,7 @@ function setup() {
 function draw() {
   time++;
   if(time>50){
-     r+=30;
+     r+=10;
      b+=30;
   }
   background(r, g, b);
