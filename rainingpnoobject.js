@@ -17,16 +17,16 @@ function setup() {
  for(var i = 0; i < 9; i++)
    tallman[i] = loadImage('assets/man1.png');
  xPos = random(width);
- yPos = random( -1200, -100);
+ yPos = random(-1200, -100);
 }
 
 function draw() {
   background(r, g, b);
   image(building, 0, 0);
   for(var i = 0; i < 42; i++)
-    image(smallman, xPos, yPos, 150, 200);
+    image(smallman[i], xPos, yPos, 150, 200);
   for(var i = 0; i < 9; i++)
-    image(tallman, xPos, yPos);
+    image(tallman[i], xPos, yPos);
   
   yPos += 30;
 }
