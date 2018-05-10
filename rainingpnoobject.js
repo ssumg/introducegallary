@@ -15,14 +15,16 @@ function setup() {
   createCanvas(1198, 1005);
   
   building = loadImage('assets/amebito.png');
- for(var i = 0; i < 42; i++)
+ for(var i = 0; i < 42; i++){
    xPos[i] = random(width);
    yPos[i] = random(-1200, -100);
    smallman[i] = loadImage('assets/man0.png');
- for(var i = 0; i < 9; i++)
+ }
+ for(var i = 0; i < 9; i++){
    aPos[i] = random(width);
    bPos[i] = random(-1100, -100);
    tallman[i] = loadImage('assets/man1.png');
+ }
 }
 
 function draw() {
@@ -33,10 +35,12 @@ function draw() {
   }
   background(r, g, b);
   image(building, 0, 0);
-  for(var i = 0; i < 42; i++)
+  for(var i = 0; i < 42; i++){
     image(smallman[i], xPos, yPos, 150, 200);
-  for(var i = 0; i < 9; i++)
+  }
+  for(var i = 0; i < 9; i++){
     image(tallman[i], aPos, bPos);
+  }
   
   yPos += 5;
   bPos += 5;
