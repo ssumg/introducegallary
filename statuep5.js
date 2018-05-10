@@ -15,7 +15,7 @@ function draw() {
   if(time % 224 == 0)
     background(200, 200, 0);
   else
-    background(60, 150, 200);
+    background(40, 100, 200);
   
   image(statue, 0, 10);
   
