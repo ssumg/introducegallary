@@ -36,14 +36,13 @@ function draw() {
   background(r, g, b);
   image(building, 0, 0);
   for(var i = 0; i < 42; i++){
-    image(smallman[i], xPos, yPos, 150, 200);
+    image(smallman[i], xPos[i], yPos[i], 150, 200);
+    yPos[i] += 5;
   }
   for(var i = 0; i < 9; i++){
-    image(tallman[i], aPos, bPos);
+    image(tallman[i], aPos[i], bPos[i]);
+    bPos[i] += 5;
   }
-  
-  yPos += 5;
-  bPos += 5;
 }
 function keyPressed(){
   if(keyCode === UP_ARROW){
