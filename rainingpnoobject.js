@@ -46,7 +46,8 @@ function draw() {
 }
 function keyPressed(){
   if(keyCode === UP_ARROW){
-    yPos-=60;
+    yPos-=30;
+    bPos-=30;
   }
 }
     
