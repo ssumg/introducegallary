@@ -56,7 +56,7 @@ function People(){
     }
     this.yPos += 15;
 }
-}
+};
 function keyPressed() {
     if(keyCode === UP_ARROW){
         for(var i=0; i<42; i++){
