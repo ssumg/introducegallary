@@ -2,7 +2,9 @@ var building;
 var r, g, b;
 var smallman = [];
 var tallman = [];
-var xPos, yPos;
+var xPos = [], yPos = [];
+var aPos = [], bPos = [];
+var time;
 
 function setup() {
   r = 0;
@@ -13,14 +15,21 @@ function setup() {
   
   building = loadImage('assets/amebito.png');
  for(var i = 0; i < 42; i++)
+   xPos[i] = random(width);
+   yPos[i] = random(-1200, -100);
    smallman[i] = loadImage('assets/man0.png');
  for(var i = 0; i < 9; i++)
+   aPos[i] = random(width);
+   bPos[i] = random(-1100, -100);
    tallman[i] = loadImage('assets/man1.png');
- xPos = random(width);
- yPos = random(-1200, -100);
 }
 
 function draw() {
+  time++;
+  if(time>50){
+     r+=30;
+     b+=30;
+  }
   background(r, g, b);
   image(building, 0, 0);
   for(var i = 0; i < 42; i++)
@@ -28,7 +37,7 @@ function draw() {
   for(var i = 0; i < 9; i++)
     image(tallman[i], xPos, yPos);
   
-  yPos += 30;
+  yPos += 5;
 }
 function keyPressed(){
   if(keyCode === UP_ARROW){
