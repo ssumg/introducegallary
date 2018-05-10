@@ -35,7 +35,7 @@ function draw() {
   background(r, g, b);
   image(building, 0, 0);
   for(var i = 0; i < 42; i++){
-    image(smallman[i], xPos[i], yPos[i], 150, 200);
+    image(smallman[i], xPos[i], yPos[i], 130, 180);
     yPos[i] += random(1,5);
   }
   for(var i = 0; i < 9; i++){
