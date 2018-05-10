@@ -37,11 +37,11 @@ function draw() {
   image(building, 0, 0);
   for(var i = 0; i < 42; i++){
     image(smallman[i], xPos[i], yPos[i], 150, 200);
-    yPos[i] += 5;
+    yPos[i] += random(1,5);
   }
   for(var i = 0; i < 9; i++){
     image(tallman[i], aPos[i], bPos[i]);
-    bPos[i] += 5;
+    bPos[i] += random(1,5);
   }
 }
 function keyPressed(){
