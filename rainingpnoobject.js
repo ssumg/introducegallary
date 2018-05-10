@@ -46,10 +46,10 @@ function draw() {
 function keyPressed(){
   if(keyCode === UP_ARROW){
     for(var i = 0; i < 42; i++){
-      yPos[i] -= 60;  
+      yPos[i] -= 100;  
     }
   for(var i = 0; i < 9; i++){
-      bPos[i] -= 60;
+      bPos[i] -= 160;
   }
  }
 }
