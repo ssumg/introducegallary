@@ -17,12 +17,12 @@ function setup() {
   building = loadImage('assets/amebito.png');
  for(var i = 0; i < 42; i++){
    xPos[i] = random(width);
-   yPos[i] = random(-1200, -100);
+   yPos[i] = random(-1500, -100);
    smallman[i] = loadImage('assets/man0.png');
  }
  for(var i = 0; i < 9; i++){
    aPos[i] = random(width);
-   bPos[i] = random(-1100, -100);
+   bPos[i] = random(-1300, -100);
    tallman[i] = loadImage('assets/man1.png');
  }
 }
@@ -35,12 +35,12 @@ function draw() {
   background(r, g, b);
   image(building, 0, 0);
   for(var i = 0; i < 42; i++){
-    image(smallman[i], xPos[i], yPos[i], 130, 180);
-    yPos[i] += random(1,5);
+    image(smallman[i], xPos[i], yPos[i], 100, 160);
+    yPos[i] += random(1,3);
   }
   for(var i = 0; i < 9; i++){
     image(tallman[i], aPos[i], bPos[i]);
-    bPos[i] += random(1,5);
+    bPos[i] += random(1,3);
   }
 }
 function keyPressed(){
