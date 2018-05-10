@@ -7,9 +7,10 @@ var aPos = [], bPos = [];
 var time;
 
 function setup() {
-  r = 0;
+  time = 0;
+  r = 10;
   g = 25;
-  b = 0;
+  b = 10;
   
   createCanvas(1198, 1005);
   
@@ -35,9 +36,10 @@ function draw() {
   for(var i = 0; i < 42; i++)
     image(smallman[i], xPos, yPos, 150, 200);
   for(var i = 0; i < 9; i++)
-    image(tallman[i], xPos, yPos);
+    image(tallman[i], aPos, bPos);
   
   yPos += 5;
+  bPos += 5;
 }
 function keyPressed(){
   if(keyCode === UP_ARROW){
