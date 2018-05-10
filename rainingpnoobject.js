@@ -29,7 +29,7 @@ function setup() {
 
 function draw() {
   time++;
-  if(time>50){
+  while(time>50){
      r+=10;
      b+=30;
   }
@@ -46,8 +46,10 @@ function draw() {
 }
 function keyPressed(){
   if(keyCode === UP_ARROW){
-    yPos-=30;
-    bPos-=30;
+    for(var i = 0; i < 42; i++){
+      yPos[i] -= 30;  }
+  for(var i = 0; i < 9; i++){
+      bPos[i] -= 30;
   }
 }
     
